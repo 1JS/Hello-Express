@@ -35,6 +35,15 @@ app.get('/hello', function(req, res) {
 	res.send("Hello World!");
 });
 
+app.get('/html', function(req, res) {
+	var message = [
+		"<h1>HTML Markup</h1>",
+		"<p>Try to use HTML.</p>"
+	].join("\n");
+
+	res.send(message);
+});
+
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
